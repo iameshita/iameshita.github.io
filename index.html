@@ -243,6 +243,10 @@ section.soft { background: var(--soft); border-top: 0; }
   .feature { padding: 26px; }
 }
 
+/* Snap to sections */
+html { scroll-snap-type: y proximity; }
+.hero, main > section, .contact { scroll-snap-align: start; }
+
 /* Color layer */
 #focus { background: var(--t1); }
 #projects { background: var(--t3); }
