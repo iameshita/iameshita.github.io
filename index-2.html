@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eshita | Law, Technology and Global Governance</title>
+<meta name="description" content="Eshita is a lawyer and policy researcher working at the intersection of global governance, technology, international affairs and public policy.">
+<meta property="og:title" content="Eshita | Law, Technology and Global Governance">
+<meta property="og:description" content="Lawyer and policy researcher working on global governance, technology, international affairs and public policy.">
+<meta property="og:image" content="img/headshot.jpg">
+<link rel="icon" href="img/headshot.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<style>
+/* Layout: bold single-column site. Big type, red accent bars, black blocks for the feature project and contact. */
+:root {
+  --bg: #ffffff;
+  --soft: #f5f5f7;
+  --ink: #1c1c28;
+  --text: #44444f;
+  --muted: #74747f;
+  --line: #e3e3e8;
+  --red: #b3261e;
+  --block: #1c1c28;
+  --on-block: #ffffff;
+  --on-block-soft: #b4b4c0;
+  --font: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  --c1: #2b59c3; --c2: #0d7f74; --c3: #a86400; --c4: #6c45c4;
+  --t1: #ecf1fd; --t2: #e4f4f1; --t3: #fdf3e2; --t4: #f2edfb; --t5: #fdeeed;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121218; --soft: #1a1a22; --ink: #f2f2f5; --text: #cfcfd8; --muted: #9c9caa;
+    --line: #2b2b36; --red: #ef5a50; --block: #22222c; --c1: #8fb0ff; --c2: #5fd6c6; --c3: #f5b958; --c4: #c3adff; --t1: #161e36; --t2: #11262a; --t3: #2a2114; --t4: #201a33; --t5: #2b1a1c; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121218; --soft: #1a1a22; --ink: #f2f2f5; --text: #cfcfd8; --muted: #9c9caa;
+  --line: #2b2b36; --red: #ef5a50; --block: #22222c; --c1: #8fb0ff; --c2: #5fd6c6; --c3: #f5b958; --c4: #c3adff; --t1: #161e36; --t2: #11262a; --t3: #2a2114; --t4: #201a33; --t5: #2b1a1c; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.65; }
+.in { max-width: 1120px; margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+a:hover { color: var(--red); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; color: var(--ink); text-wrap: balance; }
+p { margin: 0; }
+.eyebrow { font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+.bar { width: 64px; height: 6px; background: var(--red); }
+
+/* Header */
+.top .in { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 26px; }
+.logo { font-weight: 800; font-size: 18px; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
+.logo span { color: var(--red); }
+.top nav { display: flex; gap: 6px 26px; flex-wrap: wrap; font-size: 15px; font-weight: 700; }
+.top nav a { text-decoration: none; color: var(--ink); }
+.top nav a:hover { color: var(--red); }
+
+/* Hero */
+.hero .in { padding-block: 88px 104px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 56px; align-items: center; }
+.hero .txt { display: grid; gap: 26px; min-width: 0; }
+.avatar { width: clamp(220px, 28vw, 340px); height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; display: block; }
+@media (max-width: 900px) { .avatar { order: -1; width: 160px; } }
+.portrait { margin: 0; max-width: 380px; justify-self: end; width: 100%; }
+.portrait img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.gallery { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 24px; margin-bottom: 72px; align-items: start; }
+.gallery figure { margin: 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.gallery img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.gallery figcaption { font-size: 14px; color: var(--muted); }
+.gallery figcaption b { color: var(--ink); font-weight: 800; }
+.hero h1 { font-size: clamp(56px, 10vw, 124px); font-weight: 800; line-height: .95; letter-spacing: -.035em; }
+.hero .lede2 { font-size: 17px; color: var(--muted); max-width: 52ch; }
+.hero .lede { font-size: clamp(20px, 2.3vw, 25px); color: var(--text); max-width: 34ch; line-height: 1.5; font-weight: 500; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.btn { display: inline-block; font-size: 15px; font-weight: 700; padding: 14px 24px; border-radius: 4px; text-decoration: none; }
+.btn.dark { background: var(--ink); color: var(--bg); }
+.btn.dark:hover { background: var(--red); color: #fff; }
+.btn.line { border: 2px solid var(--ink); color: var(--ink); padding: 12px 22px; }
+.btn.line:hover { border-color: var(--red); color: var(--red); }
+.juris { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--line); font-weight: 700; color: var(--ink); }
+.juris span:first-child { color: var(--muted); font-weight: 500; }
+
+/* Sections */
+section { padding-block: 96px; border-top: 1px solid var(--line); }
+section.soft { background: var(--soft); border-top: 0; }
+.sh { display: grid; gap: 14px; margin-bottom: 52px; }
+.sh h2 { font-size: clamp(34px, 5vw, 52px); font-weight: 800; line-height: 1.05; letter-spacing: -.025em; max-width: 20ch; }
+
+/* About */
+.about { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 64px; }
+.prose { display: grid; gap: 18px; max-width: 62ch; }
+.prose p:first-child { font-size: 21px; font-weight: 600; color: var(--ink); line-height: 1.5; }
+.facts { display: grid; gap: 0; align-content: start; }
+.facts div { display: grid; gap: 2px; padding-block: 18px; border-bottom: 1px solid var(--line); }
+.facts div:first-child { border-top: 4px solid var(--ink); }
+.facts b { font-size: 34px; font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -.02em; }
+.facts span { font-size: 15px; color: var(--muted); }
+
+/* Focus areas */
+.areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 56px; }
+.topics { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.topics li { font-size: 14px; font-weight: 700; color: var(--ink); background: var(--bg); border: 1px solid var(--line); padding: 5px 12px; border-radius: 999px; }
+.area { display: grid; gap: 10px; align-content: start; }
+.area h3 { font-size: 21px; font-weight: 800; letter-spacing: -.01em; }
+.area p { font-size: 16px; color: var(--muted); }
+.area .n { font-size: 14px; font-weight: 800; color: var(--red); }
+
+/* Publications */
+.pubs { list-style: none; margin: 0; padding: 0; border-top: 4px solid var(--ink); }
+.pubs li { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 28px; padding-block: 24px; border-bottom: 1px solid var(--line); }
+.pubs .d { font-weight: 700; color: var(--muted); font-size: 15px; padding-top: 3px; }
+.pubs .t { font-size: 21px; font-weight: 800; line-height: 1.3; color: var(--ink); letter-spacing: -.01em; }
+.pubs a.t { text-decoration: none; }
+.pubs a.t:hover { color: var(--red); }
+.pubs a.t::after { content: " \2192"; color: var(--red); }
+.pubs .v { font-size: 15px; color: var(--muted); margin-top: 4px; }
+.pubs .tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
+.extra { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; margin-top: 72px; }
+.extra h3 { font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; }
+.extra .big { font-size: 24px; font-weight: 800; line-height: 1.3; color: var(--ink); }
+.extra p { color: var(--muted); font-size: 16px; margin-top: 10px; }
+.contrib { list-style: none; margin: 0; padding: 0; }
+.contrib li { padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 16px; }
+.contrib li:first-child { border-top: 1px solid var(--line); }
+.contrib b { color: var(--ink); font-weight: 700; }
+.contrib span { color: var(--muted); }
+
+/* Projects */
+.feature { background: var(--block); color: var(--on-block); border-radius: 6px; padding: 56px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.feature h3 { color: var(--on-block); font-size: clamp(34px, 4.6vw, 52px); font-weight: 800; line-height: 1; letter-spacing: -.03em; margin-top: 14px; }
+.feature p { color: var(--on-block-soft); margin-top: 18px; max-width: 46ch; }
+.feature .eyebrow { color: #ef5a50; }
+.feature ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.feature li { padding-left: 22px; position: relative; color: var(--on-block); font-weight: 600; }
+.feature li::before { content: ""; position: absolute; left: 0; top: 10px; width: 10px; height: 4px; background: #ef5a50; }
+.btn.red { background: #b3261e; color: #fff; margin-top: 28px; }
+.btn.red:hover { background: #ffffff; color: #1c1c28; }
+.minis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 48px; margin-top: 56px; }
+.mini .focus { font-size: 14px; font-weight: 700; color: var(--ink); }
+.mini { display: grid; gap: 10px; align-content: start; border-top: 4px solid var(--ink); padding-top: 18px; }
+.mini h3 { font-size: 21px; font-weight: 800; }
+.mini p { color: var(--muted); font-size: 16px; }
+.mini a { font-weight: 700; font-size: 15px; }
+
+.mapcard { display: grid; gap: 14px; min-width: 0; }
+.mgrid { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 4px; }
+.mt { font: 700 clamp(8px, 1vw, 11px) var(--font); aspect-ratio: 1; border: 0; border-radius: 4px; padding: 0; cursor: pointer; color: #fff; background: rgba(255, 255, 255, .08); }
+.mt.l1 { background: rgba(239, 90, 80, .3); } .mt.l2 { background: rgba(239, 90, 80, .55); } .mt.l3 { background: rgba(239, 90, 80, .8); } .mt.l4 { background: #ef5a50; color: #1c1c28; }
+.mlegend .l1 { background: rgba(239, 90, 80, .3); } .mlegend .l2 { background: rgba(239, 90, 80, .55); } .mlegend .l3 { background: rgba(239, 90, 80, .8); } .mlegend .l4 { background: #ef5a50; }
+.mtoggle { display: inline-flex; gap: 4px; padding: 4px; background: rgba(255, 255, 255, .08); border-radius: 999px; justify-self: start; }
+.mtoggle button { font: 700 13px var(--font); color: var(--on-block-soft); background: transparent; border: 0; padding: 7px 14px; border-radius: 999px; cursor: pointer; }
+.mtoggle button.on { background: #ffffff; color: #1c1c28; }
+.mt.d1 { background: rgba(92, 140, 245, .35); } .mt.d2 { background: rgba(92, 140, 245, .6); } .mt.d3 { background: #4f7ff0; }
+.mt.r1 { background: rgba(239, 90, 80, .35); } .mt.r2 { background: rgba(239, 90, 80, .6); } .mt.r3 { background: #e5544a; }
+.mt:hover, .mt:focus-visible { outline: 2px solid #ffffff; outline-offset: 1px; }
+.minfo { color: var(--on-block); font-size: 15px; min-height: 1.6em; margin: 0; }
+.minfo b { font-weight: 800; }
+.mlegend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12px; color: var(--on-block-soft); }
+.mlegend i { width: 18px; height: 10px; border-radius: 2px; display: inline-block; }
+.mlegend .d3 { background: #4f7ff0; } .mlegend .r3 { background: #e5544a; }
+.mlegend .sep { margin-left: 8px; }
+.mnote { font-size: 13px; color: var(--on-block-soft); margin: 0; }
+
+.beyond-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.beyond { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.bphoto { margin: 0; display: grid; gap: 10px; max-width: 460px; }
+.bphoto img { width: 100%; height: auto; display: block; border-radius: 6px; }
+.bphoto figcaption { font-size: 15px; font-weight: 700; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  .area, .mini, .bw, .pubs li { transition: transform .25s ease; }
+  .area:hover, .mini:hover, .bw:hover { transform: translateY(-4px); }
+  .pubs li:hover { transform: translateX(6px); }
+}
+.bw { display: grid; gap: 12px; align-content: start; border-top: 4px solid var(--ink); padding-top: 18px; }
+.bw h3 { font-size: 21px; font-weight: 800; }
+.bw p { font-size: 16px; }
+
+.awards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.award { display: grid; gap: 8px; align-content: start; border-top: 4px solid var(--ink); padding-top: 18px; }
+.award .k { font-size: 13px; font-weight: 800; letter-spacing: .12em; color: var(--red); }
+.award h3 { font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+.award .by { font-weight: 600; color: var(--ink); font-size: 15px; }
+.award p { font-size: 15px; color: var(--muted); }
+@media (max-width: 900px) { .awards { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+
+.earlier { margin-top: 28px; font-size: 16px; color: var(--muted); max-width: 72ch; }
+.earlier b { color: var(--ink); font-weight: 800; }
+.subhead2 { font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin: 64px 0 22px; }
+/* Experience */
+.roles { list-style: none; margin: 0; padding: 0; border-top: 4px solid var(--ink); }
+.roles li { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 32px; padding-block: 30px; border-bottom: 1px solid var(--line); }
+.roles .d { font-weight: 800; color: var(--red); font-size: 15px; padding-top: 4px; }
+.roles h3 { font-size: 23px; font-weight: 800; letter-spacing: -.01em; }
+.roles .o { font-weight: 600; color: var(--ink); margin-top: 4px; font-size: 16px; }
+.roles p { color: var(--muted); margin-top: 8px; max-width: 66ch; font-size: 16px; }
+
+/* Speaking + education */
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; }
+.two h2 { font-size: 34px; font-weight: 800; letter-spacing: -.02em; margin: 14px 0 28px; }
+.list { list-style: none; margin: 0; padding: 0; border-top: 4px solid var(--ink); }
+.list li { padding-block: 18px; border-bottom: 1px solid var(--line); display: grid; gap: 3px; }
+.list .k { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--red); }
+.list b { color: var(--ink); font-weight: 800; font-size: 17px; }
+.list span.m { color: var(--muted); font-size: 15px; }
+
+/* Contact */
+.contact { background: var(--block); color: var(--on-block); }
+.contact .in { padding-block: 104px 40px; }
+.contact .eyebrow { color: #ef5a50; }
+.contact h2 { color: var(--on-block); font-size: clamp(42px, 7vw, 84px); font-weight: 800; line-height: 1; letter-spacing: -.035em; margin-top: 18px; max-width: 14ch; }
+.invite { color: var(--on-block-soft); font-size: 18px; max-width: 60ch; margin-top: 20px; }
+.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 40px; }
+.email { font-size: clamp(22px, 3.4vw, 34px); font-weight: 700; color: var(--on-block); user-select: all; word-break: break-all; }
+#copy { font: 700 14px var(--font); color: #fff; background: #b3261e; border: 0; padding: 11px 18px; border-radius: 4px; cursor: pointer; }
+#copy:hover { background: #ffffff; color: #1c1c28; }
+.contact .links { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 28px; font-weight: 700; }
+.contact .links a { color: var(--on-block); }
+.foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 96px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .15); font-size: 14px; color: var(--on-block-soft); }
+
+@media (max-width: 900px) {
+  .about, .extra, .two, .feature, .hero .in { grid-template-columns: minmax(0, 1fr); }
+  .portrait { justify-self: start; max-width: 360px; }
+
+  .beyond-wrap { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .feature { padding: 36px; }
+}
+@media (max-width: 600px) {
+  section { padding-block: 64px; }
+  .hero .in { padding-block: 48px 64px; }
+  .areas, .minis, .gallery { grid-template-columns: minmax(0, 1fr); }
+  .portrait { max-width: 100%; }
+  .pubs li, .roles li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .feature { padding: 26px; }
+}
+
+/* Snap to sections */
+html { scroll-snap-type: y proximity; }
+.hero, main > section, .contact { scroll-snap-align: start; }
+
+/* Color layer */
+#focus { background: var(--t1); }
+#projects { background: var(--t3); }
+#speaking { background: var(--t2); }
+#beyond { background: var(--t4); border-top: 0; }
+.area { border-top: 4px solid var(--c1); padding-top: 18px; }
+.area:nth-child(2) { border-top-color: var(--c2); } .area:nth-child(3) { border-top-color: var(--c3); } .area:nth-child(4) { border-top-color: var(--red); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <a class="logo" href="#top" id="top">Eshita<span>.</span></a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="in">
+    <div class="txt">
+    <span class="eyebrow">Global governance · Tech and international affairs · International business · Public policy</span>
+    <h1>Eshita</h1>
+    <div class="bar"></div>
+    <p class="lede">Lawyer and policy researcher working at the intersection of global governance, technology, international affairs and public policy.</p>
+    <p class="lede2">My work combines regulatory implementation, comparative research and institutional engagement, with a focus on how policies translate into practice across different legal and political systems.</p>
+    <div class="btns"><a class="btn dark" href="#publications">Publications</a><a class="btn line" href="#contact">Contact</a></div>
+    <div class="juris"><span>Comparative research across</span><span>United States</span><span>European Union</span><span>China</span><span>India</span><span>Brazil</span></div>
+    </div>
+    <img class="avatar" src="img/headshot.jpg" alt="Eshita" width="340" height="340">
+  </div>
+</div>
+
+
+<main>
+  <section id="about">
+    <div class="in">
+      <div class="sh"><span class="eyebrow">About</span><h2>Law, research and practical tools for technology governance</h2></div>
+      <div class="about">
+        <div class="prose">
+          <p>I'm a lawyer focused on technology governance: how AI, platforms and data are regulated across countries, and what it takes for institutions to put those rules into practice.</p>
+          <p>My work spans comparative policy research, published analysis on AI, data law and climate technology, training for judges and government officials, and building open tools like the US AI Legislation Map. Before graduate school, I spent several years in regulatory and policy roles in India, working with government, industry and legal stakeholders.</p>
+          <p>I earned a Master of Arts in Law and Diplomacy at The Fletcher School, Tufts University, researching global inequalities in access to AI. At Digital Planet, I work on disinformation, platform governance, digital public infrastructure and cross-border data policy. I've also spoken at the United Nations High-Level Political Forum on global AI governance.</p>
+          <p>Beyond my research, I run Crossing Frontiers with a group of friends, an independent initiative helping young women from underserved communities in India find pathways to higher education and international opportunities.</p>
+        </div>
+        <div class="facts">
+          <div><b>5+ years</b><span>in technology regulation and government engagement</span></div>
+          <div><b>5</b><span>jurisdictions in my comparative research</span></div>
+          <div><b>7</b><span>published articles on technology, law, climate and public policy</span></div>
+          <div><b>10+</b><span>training programs for judicial officers and officials</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="focus">
+    <div class="in">
+      <div class="sh"><span class="eyebrow">Focus areas</span><h2>What keeps me curious</h2></div>
+      <div class="areas">
+        <div class="area"><h3>Global governance</h3><p>How countries and international institutions coordinate on technology, and where national approaches diverge.</p>
+          <ul class="topics"><li>Cross-border AI governance</li><li>Multilateral engagement</li><li>Comparative regulation across five jurisdictions</li></ul></div>
+        <div class="area"><h3>Technology and international affairs</h3><p>Digital diplomacy and the geopolitics of data, infrastructure and AI.</p>
+          <ul class="topics"><li>AI governance</li><li>Digital embassies and data sovereignty</li><li>Cybersecurity</li></ul></div>
+        <div class="area"><h3>International business</h3><p>How regulation shapes markets, competitiveness and cross-border business.</p>
+          <ul class="topics"><li>Data laws as industrial policy</li><li>Payment fraud and financial systems</li><li>Compliance and market entry</li></ul></div>
+        <div class="area"><h3>Public policy</h3><p>Turning research into practical guidance for governments and institutions.</p>
+          <ul class="topics"><li>Platforms and disinformation</li><li>Digital public infrastructure</li><li>Climate technology and inclusion</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="in">
+      <div class="sh"><span class="eyebrow">Publications</span><h2>Selected writing</h2></div>
+      <ul class="pubs">
+        <li><span class="d">Apr 2026</span><div><a class="t" href="https://www.governancenow.com/views/columns/time-for-india-to-build-genuine-resilience-in-energy-security">Time for India to Build Genuine Resilience in Energy Security</a><p class="v">Governance Now</p></div></li>
+        <li><span class="d">Dec 2025</span><div><a class="t" href="https://sites.tufts.edu/hitachi/data-laws-as-industrial-policy-why-the-us-ai-industry-keeps-winning/">Data Laws as Industrial Policy: Why the US AI Industry Keeps Winning</a><p class="v">Hitachi Center for Technology and International Affairs, The Fletcher School</p></div></li>
+        <li><span class="d">Jul 2025</span><div><a class="t" href="https://www.climatepolicylab.org/communityvoices/2025/7/8/erased-twice-queer-lives-on-the-frontlines-of-climate-displacement">Erased Twice: Queer Lives on the Frontlines of Climate Displacement</a><p class="v">Climate Policy Lab, The Fletcher School</p></div></li>
+        <li><span class="d">Jun 2025</span><div><a class="t" href="https://climatepolicylab.org/communityvoices/2025/6/9/climate-code-and-justice-why-inclusive-governance-matters-for-emerging-climate-technologies">Climate, Code, and Justice: Why Inclusive Governance Matters for Emerging Climate Technologies</a><p class="v">Climate Policy Lab, The Fletcher School</p></div></li>
+        <li><span class="d">Apr 2025</span><div><a class="t" href="https://climatepolicylab.org/communityvoices/2025/4/16/women-in-climatetech-driving-economic-growth-through-innovation-and-equity">Women in ClimateTech: Driving Economic Growth Through Innovation and Equity</a><p class="v">Climate Policy Lab, The Fletcher School</p></div></li>
+        <li><span class="d">Mar 2025</span><div><a class="t" href="https://climatepolicylab.org/communityvoices/2025/3/6/the-digital-divide-in-climate-tech-unequal-access-to-ai-driven-solutions">The Digital Divide in Climate Tech: Unequal Access to AI-Driven Solutions</a><p class="v">Climate Policy Lab, The Fletcher School</p></div></li>
+        <li><span class="d">Nov 2024</span><div><a class="t" href="https://www.governancenow.com/views/columns/ai-and-the-copyright-dilemma-what-india-needs-to-do">AI and the Copyright Dilemma: What India Needs to Do</a><p class="v">Governance Now · Recognized in <a href="https://announcements.tufts.edu/kudos/2024/12/26/kudos-january-2025">Tufts Kudos</a></p></div></li>
+      </ul>
+      <div class="extra">
+        <div>
+          <h3>Academic research</h3>
+          <p class="big">The Data Edge: U.S. Regulatory Flexibility and the Global AI Access Divide</p>
+          <p>MALD capstone, The Fletcher School, December 2025. Advisor: Professor Bhaskar Chakravorti.</p>
+        </div>
+        <div>
+          <h3>Digital diplomacy research and writing</h3>
+          <p style="margin: 0 0 14px">At Digital Planet, I research and write on digital diplomacy for policymakers and industry leaders.</p>
+          <ul class="contrib">
+            <li><b>Digital embassies</b> <span>· Data sovereignty, infrastructure resilience and cross-border data sharing</span></li>
+            <li><b>Cybersecurity and payment fraud</b> <span>· Cyber-enabled financial fraud and cross-border coordination</span></li>
+            <li><b>AI governance</b> <span>· Regulatory divergence and governing AI across borders</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="projects">
+    <div class="in">
+      <div class="sh"><span class="eyebrow">Projects</span><h2>Projects and initiatives</h2></div>
+      <div class="feature">
+        <div>
+          <span class="eyebrow">Featured · Work in progress</span>
+          <h3>US AI Legislation Map</h3>
+          <p>An interactive research tool I'm developing to track state-level AI laws, bills and official actions. It's a work in progress, and the data is still being expanded and verified.</p>
+          <a class="btn red" href="https://iameshita.github.io/ai-legislation-map/">See the current version</a>
+        </div>
+        <div class="mapcard">
+          <div class="mtoggle" role="group" aria-label="Map layer"><button type="button" class="on" data-layer="vote" aria-pressed="true">2024 election</button><button type="button" data-layer="laws" aria-pressed="false">AI legislation</button></div>
+          <div class="mgrid" id="mgrid" role="img" aria-label="Tile map of US states"></div>
+          <p class="minfo" id="minfo" aria-live="polite">Tap a state to see its AI laws and bills.</p>
+          <div class="mlegend" id="mlegend"></div>
+          <p class="mnote">99 laws passed · 22 pending bills · 27 official guidance actions, as of October 14, 2026. Election layer: FEC results.</p>
+        </div>
+      </div>
+      <div class="minis">
+        <div class="mini"><h3>Both Sides</h3><p>A platform in development that sets out the strongest arguments for and against on public policy questions.</p><a href="https://both-sides-seven.vercel.app/">Visit Both Sides</a></div>
+        <div class="mini"><h3>Digital Oasis</h3><p>Led a 12+ member team at the Fletcher IDEA Lab researching digital and emerging technology challenges.</p></div>
+        <div class="mini"><h3>ServiceMap India</h3><p>Better access to essential services and citizen information through digital tools and local partnerships.</p></div>
+        <div class="mini"><span class="eyebrow">Independent initiative · 2025 – present</span><h3>Crossing Frontiers</h3><p>A mentorship initiative I run with a group of friends, helping young women from marginalized and underprivileged backgrounds in India pursue higher education, including study abroad. Together we offer one-on-one guidance on university applications, scholarships, funding and institutional processes.</p><p class="focus">Women's education · Educational equity · Mentorship</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="in">
+      <div class="sh"><span class="eyebrow">Experience</span><h2>Where I've worked</h2></div>
+      <ul class="roles">
+        <li><span class="d">2023 – Present</span><div><h3>Digital Planet, The Fletcher School, Tufts University</h3><p class="o">Research Analyst</p>
+          <p>Research and writing on digital diplomacy, covering digital embassies, cybersecurity and payment fraud, and AI governance, alongside comparative research on disinformation and platform regulation.</p></div></li>
+        <li><span class="d">2025</span><div><h3>LunARC</h3><p class="o">Graduate Intern</p>
+          <p>Inclusive lunar governance, education and international collaboration on emerging space activities.</p></div></li>
+        <li><span class="d">2024 – 2025</span><div><h3>UNESCO / NBF Media Literacy Initiative for Judicial Officers, Delhi</h3><p class="o">Senior Project Manager and Lead</p>
+          <p>Designed and delivered 10+ training programs on AI, digital media and regulatory risk, coordinating ministries, judicial bodies and international agencies.</p></div></li>
+        <li><span class="d">2020 – 2023</span><div><h3>News Broadcasters Federation, Delhi</h3><p class="o">Public Policy, Governance and Regulatory Associate (founding team)</p>
+          <p>Part of the founding team of the News Broadcasters Federation, supporting the establishment of institutional self-regulatory mechanisms for India's news broadcasting industry.</p>
+          <p>Worked with government ministries, regulatory authorities, legal professionals and industry stakeholders on broadcasting policy, regulatory compliance and implementation of the Information Technology Rules, 2021, across approximately 150 member news channels.</p></div></li>
+        <li><span class="d">2019 – Present</span><div><h3>Black &amp; White Enterprise, Delhi</h3><p class="o">Policy Consultant and Founder</p>
+          <p>Advises corporate clients and trade bodies on regulatory compliance, market entry and policy alignment.</p></div></li>
+      </ul>
+
+      <p class="earlier"><b>Earlier internships and programs:</b> Lokarpan Fellowship, LEAD India's World Affairs in Theory and Practice program, and legal internships at the Chambers of Salman Khurshid, Senior Advocate, and at Bharucha &amp; Partners.</p>
+    </div>
+  </section>
+
+  <section class="soft" id="speaking">
+    <div class="in two">
+      <div>
+        <span class="eyebrow">Speaking</span>
+        <h2>Speaking and service</h2>
+        <ul class="list">
+          <li><span class="k">2025 · Speaker</span><b>United Nations High-Level Political Forum</b><span class="m">New York. Presented on global AI governance.</span></li>
+          <li><span class="k">2022 · Moderator</span><b>Broadcasting industry panel, Expo 2020 Dubai</b><span class="m">Chaired by the Secretary, Ministry of Information and Broadcasting, India.</span></li>
+          <li><span class="k">2022 · Contributor</span><b>Bureau of Indian Standards</b><span class="m">Committee on news industry standardization.</span></li>
+          <li><span class="k">Co-founder and co-lead</span><b>Space and Broadcast Policy Student Group, The Fletcher School</b></li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Education</span>
+        <h2>Education</h2>
+        <ul class="list">
+          <li><span class="k">2026</span><b>MALD, The Fletcher School, Tufts University</b><span class="m">Technology and International Affairs; Global Governance and International Organizations; International Business. Affiliated with the Hitachi Center for Technology and International Affairs, the Leir Institute for Migration and Human Security, and Digital Planet.</span></li>
+          <li><span class="k">2024 – 2025</span><b>Harvard Kennedy School</b><span class="m">Cross-registered: Grand Challenges in Technology and Society (Prof. Latanya Sweeney); Digital Governance and Leadership in the Public Sphere (Prof. Anil Arora); Cybersecurity: Law, Policy, and Institutions (Prof. Bruce Schneier).</span></li>
+          <li><span class="k">2024 – 2025</span><b>Harvard Law School</b><span class="m">Cross-registered: Negotiation Workshop (Prof. Robert Mnookin and Prof. Douglas Stone).</span></li>
+          <li><span class="k">2020</span><b>B.A. LL.B. (Hons.), NUSRL Ranchi</b><span class="m">Honours in International Law. Top 10% of class.</span></li>
+          <li><span class="k">Bar</span><b>Advocate, Bar Council of Delhi</b><span class="m">Enrolled November 2020.</span></li>
+          <li><span class="k">Certifications</span><b>Selected courses and certifications</b><span class="m">World Intellectual Property Organization, General Course on Intellectual Property (2019) · UN CC:Learn, Gender and Environment (2019) · Centre for Civil Society, ePolicy for Young Leaders (2020) · NGPL Sansad Ratna Awards Committee, Polity, Governance and Politics (2020) · Leiden University via Coursera, International Law in Action: the Arbitration of International Disputes</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="recognition">
+    <div class="in">
+      <div class="sh"><span class="eyebrow">Recognition</span><h2>Selected recognition</h2></div>
+      <div class="awards">
+        <div class="award"><span class="k">2025</span><h3>Honos Civicus Society</h3><p class="by">Tisch College of Civic Life, Tufts University</p><p>Recognizes graduating students who have shown sustained commitment to community service and civic engagement during their time at Tufts.</p></div>
+        <div class="award"><span class="k">2024</span><h3>Harry Radliffe Award</h3><p class="by">Fletcher Alumni of Color Association, The Fletcher School</p></div>
+        <div class="award"><span class="k">2021</span><h3>Young Achiever Award</h3><p class="by">CMO Asia</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <div class="in">
+      <div class="sh"><span class="eyebrow">Beyond work</span><h2>When I'm not reading AI bills</h2></div>
+      <div class="beyond-wrap">
+      <figure class="bphoto"><img src="img/outdoors.jpg" alt="Eshita smiling by a lake on a sunny day" width="900" height="1199" loading="lazy"></figure>
+      <div class="beyond">
+        <div class="bw">
+          <h3>Creative pursuits</h3>
+          <p>I'm learning painting, watercolors and sketching, and I recently took up the ukulele. If you play too, message me. I'd love to find people to practice with.</p>
+          <p>I trained in Indian classical dance for seven years and studied the tabla for a year. Music and dance have long been an important part of my life.</p>
+        </div>
+        <div class="bw">
+          <h3>Outdoors and literature</h3>
+          <p>As much as I love diving deep into my computer, I'm just as happy outdoors. I love running, hiking and any excuse to be out in the fresh air.</p>
+          <p>I'm also an enthusiastic reader, especially of literature, and lately I've been making a conscious effort to read more Hindi literature.</p>
+        </div>
+        <div class="bw">
+          <h3>Languages and writing</h3>
+          <p>I'm fluent in English and Hindi, and I'm learning Spanish.</p>
+          <p>I also write personal essays and reflections on Medium. I keep that writing separate from this site, but feel free to ask me for the link.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="in">
+    <span class="eyebrow">Contact</span>
+    <h2>Say hello.</h2>
+    <p class="invite">I'm always interested in thoughtful conversations and collaborations on technology governance, international affairs, public policy and institutional development. Whether you're working on a research project, organizing a discussion or simply want to exchange ideas, feel free to reach out.</p>
+    <div class="mail">
+      <span class="email" id="email">eshita.law@gmail.com</span>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+    <div class="links"><a href="https://www.linkedin.com/in/eshita-pandey/">LinkedIn</a><a href="https://github.com/iameshita">GitHub</a></div>
+    <div class="foot"><span>© 2026 Eshita · Thanks for stopping by.</span><span>Greater Boston · Open to relocation</span></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var btn = this, el = document.getElementById('email');
+  function done(m) { btn.textContent = m; setTimeout(function () { btn.textContent = 'Copy email'; }, 1800); }
+  function select() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); }
+  try { navigator.clipboard.writeText(el.textContent).then(function () { done('Copied'); }, select); } catch (e) { select(); }
+});
+</script>
+<script>
+(function () {
+  var P = {"Alabama":["R",30.5],"Alaska":["R",13.1],"Arizona":["R",5.5],"Arkansas":["R",30.6],"California":["D",20.1],"Colorado":["D",11],"Connecticut":["D",14.5],"Delaware":["D",14.7],"District of Columbia":["D",83.8],"Florida":["R",13.1],"Georgia":["R",2.2],"Hawaii":["D",23.1],"Idaho":["R",36.5],"Illinois":["D",10.9],"Indiana":["R",19],"Iowa":["R",13.2],"Kansas":["R",16.1],"Kentucky":["R",30.5],"Louisiana":["R",22],"Maine":["D",6.9],"Maryland":["D",28.5],"Massachusetts":["D",25.2],"Michigan":["R",1.4],"Minnesota":["D",4.2],"Mississippi":["R",22.9],"Missouri":["R",18.4],"Montana":["R",19.9],"Nebraska":["R",20.5],"Nevada":["R",3.1],"New Hampshire":["D",2.8],"New Jersey":["D",5.9],"New Mexico":["D",6],"New York":["D",12.6],"North Carolina":["R",3.2],"North Dakota":["R",36.5],"Ohio":["R",11.2],"Oklahoma":["R",34.3],"Oregon":["D",14.3],"Pennsylvania":["R",1.7],"Rhode Island":["D",13.8],"South Carolina":["R",17.9],"South Dakota":["R",29.2],"Tennessee":["R",29.7],"Texas":["R",13.7],"Utah":["R",21.6],"Vermont":["D",31.5],"Virginia":["D",5.8],"Washington":["D",18.2],"West Virginia":["R",41.9],"Wisconsin":["R",0.9],"Wyoming":["R",45.8]}, D = {"AL":["Alabama",2,0,0],"AZ":["Arizona",1,0,0],"AR":["Arkansas",2,0,1],"CA":["California",11,0,2],"CO":["Colorado",4,1,0],"CT":["Connecticut",4,0,0],"DE":["Delaware",0,0,1],"FL":["Florida",2,0,1],"GA":["Georgia",2,0,0],"HI":["Hawaii",2,0,0],"ID":["Idaho",1,0,0],"IL":["Illinois",6,3,0],"IN":["Indiana",2,0,0],"IA":["Iowa",2,0,0],"KS":["Kansas",2,0,0],"KY":["Kentucky",2,0,0],"LA":["Louisiana",2,0,0],"ME":["Maine",2,0,1],"MD":["Maryland",4,0,1],"MA":["Massachusetts",0,2,2],"MI":["Michigan",2,1,0],"MN":["Minnesota",2,1,0],"MS":["Mississippi",1,0,2],"MO":["Missouri",0,0,1],"MT":["Montana",2,0,0],"NE":["Nebraska",1,0,0],"NV":["Nevada",1,0,0],"NH":["New Hampshire",2,0,0],"NJ":["New Jersey",2,3,2],"NM":["New Mexico",1,0,0],"NY":["New York",6,5,3],"NC":["North Carolina",0,1,1],"ND":["North Dakota",1,0,0],"OH":["Ohio",1,1,1],"OK":["Oklahoma",2,0,0],"OR":["Oregon",1,0,0],"PA":["Pennsylvania",1,1,1],"RI":["Rhode Island",2,0,0],"SC":["South Carolina",1,0,0],"SD":["South Dakota",2,0,0],"TN":["Tennessee",3,0,0],"TX":["Texas",2,0,1],"UT":["Utah",3,0,1],"VT":["Vermont",2,0,0],"VA":["Virginia",0,1,3],"WA":["Washington",3,2,1],"WI":["Wisconsin",2,0,1]}, N = {"AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District of Columbia","FL":"Florida","GA":"Georgia","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PA":"Pennsylvania","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming"};
+  var rows = [["AK",0,"ME",10],["VT",9,"NH",10],["WA",0,"ID",1,"MT",2,"ND",3,"MN",4,"IL",5,"WI",6,"MI",7,"NY",8,"RI",9,"MA",10],["OR",0,"NV",1,"WY",2,"SD",3,"IA",4,"IN",5,"OH",6,"PA",7,"NJ",8,"CT",9],["CA",0,"UT",1,"CO",2,"NE",3,"MO",4,"KY",5,"WV",6,"VA",7,"MD",8,"DE",9],["AZ",1,"NM",2,"KS",3,"AR",4,"TN",5,"NC",6,"SC",7,"DC",8],["OK",3,"LA",4,"MS",5,"AL",6,"GA",7],["HI",0,"TX",3,"FL",8]];
+  var box = document.getElementById("mgrid"), info = document.getElementById("minfo");
+  var layer = "vote", tiles = [];
+  function total(c) { var d = D[c]; return d ? d[1] + d[2] + d[3] : 0; }
+  function nm(c) { return D[c] ? D[c][0] : N[c]; }
+  function cls(c) {
+    if (layer === "laws") { var t = total(c); return "l" + (t === 0 ? 0 : t <= 2 ? 1 : t <= 5 ? 2 : t <= 9 ? 3 : 4); }
+    var v = P[nm(c)]; if (!v) return "l0"; var k = v[1] < 5 ? 1 : v[1] < 15 ? 2 : 3; return (v[0] === "D" ? "d" : "r") + k;
+  }
+  var legends = {
+    laws: '<span>Fewer</span><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>More AI laws, bills and guidance</span>',
+    vote: '<i class="d3"></i><span>Democratic</span><i class="r3"></i><span>Republican</span><span class="sep">2024 presidential winner. Darker means a wider margin.</span>'
+  };
+  function show(code) {
+    var d = D[code], v = P[nm(code)];
+    var txt = "<b>" + nm(code) + "</b> \u00b7 " + (d ? total(code) + " AI entries (" + d[1] + " passed, " + d[2] + " pending, " + d[3] + " guidance)" : "no AI entries tracked yet");
+    if (layer === "vote" && v) txt += " \u00b7 2024: " + (v[0] === "D" ? "Democratic" : "Republican") + " +" + v[1];
+    info.innerHTML = txt;
+  }
+  function paint() {
+    tiles.forEach(function (b) { b.className = "mt " + cls(b.dataset.c); });
+    document.getElementById("mlegend").innerHTML = legends[layer];
+  }
+  rows.forEach(function (row, r) {
+    for (var i = 0; i < row.length; i += 2) {
+      var c = row[i];
+      var b = document.createElement("button");
+      b.type = "button"; b.dataset.c = c; b.textContent = c;
+      b.style.gridRow = r + 1; b.style.gridColumn = row[i + 1] + 1;
+      b.setAttribute("aria-label", nm(c) + ": " + total(c) + " AI entries");
+      b.addEventListener("mouseenter", show.bind(null, c));
+      b.addEventListener("focus", show.bind(null, c));
+      b.addEventListener("click", show.bind(null, c));
+      box.appendChild(b); tiles.push(b);
+    }
+  });
+  document.querySelectorAll(".mtoggle button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      layer = btn.dataset.layer;
+      document.querySelectorAll(".mtoggle button").forEach(function (o) { var on = o === btn; o.classList.toggle("on", on); o.setAttribute("aria-pressed", on); });
+      paint(); show("NY");
+    });
+  });
+  paint();
+  show("NY");
+})();
+</script>
+</body>
+</html>
